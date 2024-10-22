@@ -9,10 +9,14 @@
 	// STYLES
 	import '../global.scss';
 
-	// IMAGES
+	// UTILS
 	import { getRandomInt } from '../utils/random';
 
+	// COMPONENTS
+	import Controls from './Controls.svelte';
 	import Image from '$lib/Image.svelte';
+
+	// IMAGES
 	import BatCat from '$lib/icons/BatCat.svelte';
 	import Web from '$lib/icons/Web.svelte';
 	import Candle from '$lib/icons/Candle.svelte';
@@ -57,82 +61,67 @@
 		component: Component;
 	};
 
-	const images: Component[] = [
-		Web,
-		GnomeBats,
-		Candle,
-		Hat,
-		Tombstone,
-		BatCat,
-		Broom,
-		Candy,
-		Cauldron,
-		Cat,
-		Ghost,
-		Pumpkin,
-		Skull
+	const images: IconImage[] = [
+		{
+			id: 'web',
+			component: Web
+		},
+		{
+			id: 'gnomeBats',
+			component: GnomeBats
+		},
+		{
+			id: 'candle',
+			component: Candle
+		},
+		{
+			id: 'hat',
+			component: Hat
+		},
+		{
+			id: 'tombstone',
+			component: Tombstone
+		},
+		{
+			id: 'batcat',
+			component: BatCat
+		},
+		{
+			id: 'broom',
+			component: Broom
+		},
+		{
+			id: 'Candy',
+			component: Candy
+		},
+		{
+			id: 'cauldrom',
+			component: Cauldron
+		},
+		{
+			id: 'Cat',
+			component: Cat
+		},
+		{
+			id: 'ghost',
+			component: Ghost
+		},
+		{
+			id: 'pumpkin',
+			component: Pumpkin
+		},
+		{
+			id: 'skull',
+			component: Skull
+		}
 	];
-	// const images: IconImage[] = [
-	// 	{
-	// 		id: 'web',
-	// 		component: Web
-	// 	},
-	// 	{
-	// 		id: 'gnomeBats',
-	// 		component: GnomeBats
-	// 	},
-	// 	{
-	// 		id: 'candle',
-	// 		component: Candle
-	// 	},
-	// 	{
-	// 		id: 'hat',
-	// 		component: Hat
-	// 	},
-	// 	{
-	// 		id: 'tombstone',
-	// 		component: Tombstone
-	// 	},
-	// 	{
-	// 		id: 'batcat',
-	// 		component: BatCat
-	// 	},
-	// 	{
-	// 		id: 'broom',
-	// 		component: Broom
-	// 	},
-	// 	{
-	// 		id: 'Candy',
-	// 		component: Candy
-	// 	},
-	// 	{
-	// 		id: 'cauldrom',
-	// 		component: Cauldron
-	// 	},
-	// 	{
-	// 		id: 'Cat',
-	// 		component: Cat
-	// 	},
-	// 	{
-	// 		id: 'ghost',
-	// 		component: Ghost
-	// 	},
-	// 	{
-	// 		id: 'pumpkin',
-	// 		component: Pumpkin
-	// 	},
-	// 	{
-	// 		id: 'skull',
-	// 		component: Skull
-	// 	}
-	// ];
 
 	let imagesToUse: typeof images = $state([...images]);
 	let usedImages: typeof images = $state([]);
 
 	const isDisabled = $derived(imagesToUse.length === 0);
 
-	function handleClick() {
+	function handleNext() {
 		if (isDisabled) return;
 		const randomIndex = getRandomInt(0, imagesToUse.length - 1);
 		const selectedImage = imagesToUse[randomIndex];
@@ -150,33 +139,25 @@
 		e.preventDefault();
 
 		const { code } = e;
-		if (code === 'Space') handleClick();
+		if (code === 'Space') handleNext();
 
 		if (code === 'KeyR') handleReset();
 	}
 </script>
 
 <ul>
-	{#each usedImages as component, idx}
+	{#each usedImages as { id, component }, idx (id)}
 		<li>
-			<Image isFeatured={idx === 0} id="" imageComponent={component} />
+			<Image isFeatured={idx === 0} {id} imageComponent={component} />
 		</li>
 	{/each}
 </ul>
-<div class="controls">
-	<button onclick={handleClick} disabled={isDisabled}>Next</button>
-	<button onclick={handleReset}>Reset</button>
-</div>
-
-<pre>
-    {JSON.stringify(imagesToUse)}
-</pre>
-<hr />
-<pre>
-    {JSON.stringify(usedImages)}
-</pre>
+<Controls {handleNext} {handleReset} {isDisabled} />
 
 <svelte:window onkeypress={handleKeyPress} />
+<svelte:head>
+	<title>Halloween bingo with Ms. Messina's 5th grade class</title>
+</svelte:head>
 
 <style lang="scss">
 	ul {
@@ -203,12 +184,5 @@
 				grid-row: 1/-1;
 			}
 		}
-	}
-
-	.controls {
-		display: none;
-		flex: none;
-		padding: 1rem;
-		background: #fff4;
 	}
 </style>
