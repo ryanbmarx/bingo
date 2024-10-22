@@ -1,7 +1,9 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
-import svg from '@poppanator/sveltekit-svg';
 
 export default defineConfig({
-	plugins: [sveltekit(), svg()]
+	plugins: [sveltekit()],
+	build: {
+		chunkSizeWarningLimit: 1000 // This is huge, but our usecase is very limited so it is ok.
+	}
 });
