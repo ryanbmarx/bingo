@@ -10,12 +10,12 @@
 	style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
 >
 	<g transform="matrix(1,0,0,1,-7642,-47)">
-		<g id="Artboard9" transform="matrix(1,0,0,1,-0.857943,-0.300055)">
+		<g transform="matrix(1,0,0,1,-0.857943,-0.300055)">
 			<rect x="7642.86" y="47.3" width="696.624" height="593.909" style="fill:none;" />
-			<clipPath id="_clip1">
+			<clipPath id="_clip1-batcat">
 				<rect x="7642.86" y="47.3" width="696.624" height="593.909" />
 			</clipPath>
-			<g clip-path="url(#_clip1)">
+			<g clip-path="url(#_clip1-batcat)">
 				<g transform="matrix(1,0,0,1,6474.68,1332.7)">
 					<g transform="matrix(1,0,0,1,279.341,-2179.66)">
 						<path

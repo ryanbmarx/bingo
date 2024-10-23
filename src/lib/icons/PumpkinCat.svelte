@@ -13,10 +13,10 @@
 	<g transform="matrix(1,0,0,1,-4748,-38)">
 		<g id="pumpkin-cat" transform="matrix(1,0,0,1,-0.634445,-0.262937)">
 			<rect x="4748.63" y="38.263" width="474.27" height="602.946" style="fill:none;" />
-			<clipPath id="_clip1">
+			<clipPath id="_clip1pumpkin-cat">
 				<rect x="4748.63" y="38.263" width="474.27" height="602.946" />
 			</clipPath>
-			<g clip-path="url(#_clip1)">
+			<g clip-path="url(#_clip1pumpkin-cat)">
 				<g transform="matrix(1,0,0,1,4157.15,2013.9)">
 					<g transform="matrix(1,0,0,1,279.341,-2179.66)">
 						<path

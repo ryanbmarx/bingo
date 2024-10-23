@@ -12,10 +12,10 @@
 	<g transform="matrix(1,0,0,1,-3103,-28)">
 		<g id="gnome-bats" transform="matrix(1,0,0,1,-189.101,-702.113)">
 			<rect x="3292.1" y="730.113" width="256.316" height="644.07" style="fill:none;" />
-			<clipPath id="_clip1">
+			<clipPath id="_clip1gnome-bats">
 				<rect x="3292.1" y="730.113" width="256.316" height="644.07" />
 			</clipPath>
-			<g clip-path="url(#_clip1)">
+			<g clip-path="url(#_clip1gnome-bats)">
 				<g transform="matrix(1,0,0,1,-17.9775,937.174)">
 					<g id="Layer1">
 						<g>

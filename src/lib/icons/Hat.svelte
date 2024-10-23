@@ -12,10 +12,10 @@
 	<g transform="matrix(1,0,0,1,-7414,-2083)">
 		<g id="hat" transform="matrix(1,0,0,1,-0.318459,-0.349451)">
 			<rect x="7414.32" y="2083.35" width="744.337" height="533.25" style="fill:none;" />
-			<clipPath id="_clip1">
+			<clipPath id="_clip1hat">
 				<rect x="7414.32" y="2083.35" width="744.337" height="533.25" />
 			</clipPath>
-			<g clip-path="url(#_clip1)">
+			<g clip-path="url(#_clip1hat)">
 				<g transform="matrix(1,0,0,1,6995.75,-616.069)">
 					<g transform="matrix(1,0,0,1,418.888,1058.31)">
 						<path

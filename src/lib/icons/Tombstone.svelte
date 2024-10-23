@@ -12,10 +12,10 @@
 	<g transform="matrix(1,0,0,1,-2253,-1999)">
 		<g id="Tombstone" transform="matrix(1,0,0,1,-0.137088,-0.708491)">
 			<rect x="2253.14" y="1999.71" width="535.34" height="700.532" style="fill:none;" />
-			<clipPath id="_clip1">
+			<clipPath id="_clip1Tombstone">
 				<rect x="2253.14" y="1999.71" width="535.34" height="700.532" />
 			</clipPath>
-			<g clip-path="url(#_clip1)">
+			<g clip-path="url(#_clip1Tombstone)">
 				<g transform="matrix(1,0,0,1,424.904,1296.48)">
 					<g>
 						<g>
