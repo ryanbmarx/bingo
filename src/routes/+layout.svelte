@@ -11,9 +11,6 @@
 	// STYLES
 	import '../global.scss';
 
-	// ASSETS
-	import foreground from '$lib/assets/bg.svg';
-
 	// UTILS
 	import { getRandomInt } from '../utils/random';
 
