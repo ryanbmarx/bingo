@@ -21,7 +21,7 @@
 <style lang="scss">
 	.controls {
 		padding: 1rem;
-		background: #888;
+		background: color-mix(in srgb, #220929 90%, #fff 10%);
 
 		display: flex;
 		gap: 1rem;

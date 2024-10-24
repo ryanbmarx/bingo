@@ -6,8 +6,10 @@ html {
 		// display: flex;
 		// flex-flow: column nowrap;
 		// gap: var(--gap);
-		// height: 100vh;
+		height: 100vh;
+		overflow: hidden;
 		background: #aaa;
+		background-image: radial-gradient(#42135b, #3e1247);
 	}
 
 	* {

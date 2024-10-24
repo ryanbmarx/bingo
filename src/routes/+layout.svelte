@@ -11,6 +11,9 @@
 	// STYLES
 	import '../global.scss';
 
+	// ASSETS
+	import foreground from '$lib/assets/bg.svg';
+
 	// UTILS
 	import { getRandomInt } from '../utils/random';
 
@@ -19,6 +22,8 @@
 	import Image from '$lib/Image.svelte';
 
 	import { page } from '$app/stores';
+	import House from '$lib/House.svelte';
+	import Witch from '$lib/Witch.svelte';
 
 	type IconImage = {
 		id: string;
@@ -54,8 +59,6 @@
 		if (code === 'Space') handleNext();
 		if (code === 'KeyR') handleReset();
 	}
-
-	console.log($page);
 </script>
 
 <ul>
@@ -65,13 +68,19 @@
 		</li>
 	{/each}
 </ul>
+
+<Witch />
+<House />
+<div class="foreground">
+	<img src={foreground} alt="" />
+</div>
+
 <Controls {handleNext} {handleReset} {isDisabled} />
 
 <svelte:window onkeypress={handleKeyPress} />
 <svelte:head>
 	<title>{pageTitle}</title>
 </svelte:head>
-<slot />
 
 <style lang="scss">
 	ul {
@@ -84,20 +93,45 @@
 		display: grid;
 		grid-template: repeat(6, minmax(1px, 1fr)) / repeat(var(--column-count), minmax(1px, 1fr));
 		gap: var(--gap);
+		align-items: center;
 
 		position: absolute;
 		inset: 0;
 		height: 100%;
 		width: 100%;
 
+		max-width: 1280px;
+		margin: 0 auto;
+
 		li {
 			grid-column: span 2;
 			&:first-child {
 				// Make the first one large and featured
-				padding-right: 2rem;
+				align-self: start;
+				padding: 2rem;
 				grid-column: 1 / 15;
 				grid-row: 1/-1;
+
+				:global(.featured svg) {
+					position: relative;
+					z-index: 100;
+				}
 			}
+		}
+	}
+
+	.foreground {
+		width: 100%;
+		min-height: 10rem;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
 		}
 	}
 </style>
