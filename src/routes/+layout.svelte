@@ -71,9 +71,7 @@
 
 <Witch />
 <House />
-<div class="foreground">
-	<img src={foreground} alt="" />
-</div>
+<div class="foreground"></div>
 
 <Controls {handleNext} {handleReset} {isDisabled} />
 
@@ -130,11 +128,14 @@
 		bottom: 0;
 		left: 0;
 
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			display: block;
-		}
+		background-image: url('$lib/assets/bg.svg') bottom center;
+		background-size: contain;
+
+		// img {
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	object-fit: cover;
+		// 	display: block;
+		// }
 	}
 </style>
