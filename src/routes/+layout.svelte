@@ -84,14 +84,12 @@
 
 <style lang="scss">
 	ul {
-		--column-count: 24;
 		margin: 0;
 		list-style: none;
-		outline: 1px solid blue;
 		padding: var(--gap);
 
 		display: grid;
-		grid-template: repeat(6, minmax(1px, 1fr)) / repeat(var(--column-count), minmax(1px, 1fr));
+		grid-template: repeat(6, minmax(1px, 1fr)) / repeat(25, minmax(1px, 1fr));
 		gap: var(--gap);
 		align-items: center;
 
@@ -100,11 +98,15 @@
 		height: 100%;
 		width: 100%;
 
-		max-width: 1280px;
+		max-width: 1380px;
 		margin: 0 auto;
 
 		li {
 			grid-column: span 2;
+			:global(svg) {
+				height: 100%;
+				max-height: 130px;
+			}
 			&:first-child {
 				// Make the first one large and featured
 				align-self: start;
@@ -115,6 +117,7 @@
 				:global(.featured svg) {
 					position: relative;
 					z-index: 100;
+					max-height: unset;
 				}
 			}
 		}

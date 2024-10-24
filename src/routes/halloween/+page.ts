@@ -1,9 +1,11 @@
+import Banner from '$lib/icons/Banner.svelte';
 import Bat from '$lib/icons/Bat.svelte';
 import BatCat from '$lib/icons/BatCat.svelte';
 import Broom from '$lib/icons/Broom.svelte';
 import Candle from '$lib/icons/Candle.svelte';
 import Candleabra from '$lib/icons/Candleabra.svelte';
 import Candy from '$lib/icons/Candy.svelte';
+import CandyCorn from '$lib/icons/CandyCorn.svelte';
 import Castle from '$lib/icons/Castle.svelte';
 import Cat from '$lib/icons/Cat.svelte';
 import CatPumpkin from '$lib/icons/CatPumpkin.svelte';
@@ -12,11 +14,14 @@ import Coffin from '$lib/icons/Coffin.svelte';
 import Crow from '$lib/icons/Crow.svelte';
 import CrystalBall from '$lib/icons/CrystalBall.svelte';
 import Drink from '$lib/icons/Drink.svelte';
+import Frankenstein from '$lib/icons/Frankenstein.svelte';
 import Ghost from '$lib/icons/Ghost.svelte';
 import GnomeBats from '$lib/icons/GnomeBats.svelte';
 import Hat from '$lib/icons/Hat.svelte';
+import MexicoSkull from '$lib/icons/MexicoSkull.svelte';
 import Moon from '$lib/icons/Moon.svelte';
 import Owl from '$lib/icons/Owl.svelte';
+import Potion from '$lib/icons/Potion.svelte';
 import Pumpkin from '$lib/icons/Pumpkin.svelte';
 import Skull from '$lib/icons/Skull.svelte';
 import Tombstone from '$lib/icons/Tombstone.svelte';
@@ -27,6 +32,26 @@ export function load() {
 	return {
 		pageTitle: "Halloween bingo with Ms. Messina's 5th grade class",
 		images: [
+			{
+				id: 'MexicoSkull',
+				component: MexicoSkull
+			},
+			{
+				id: 'banner',
+				component: Banner
+			},
+			{
+				id: 'candyCorn',
+				component: CandyCorn
+			},
+			{
+				id: 'potion',
+				component: Potion
+			},
+			{
+				id: 'frankenstein',
+				component: Frankenstein
+			},
 			{
 				id: 'tree',
 				component: Tree
