@@ -4,15 +4,15 @@
 
 	type Props = {
 		isFeatured: boolean;
-		imageComponent: Component;
+		ImageComponent: Component;
 		id: string;
 	};
 
-	let props: Props = $props();
+	let { isFeatured, ImageComponent, id }: Props = $props();
 </script>
 
-<div class:featured={props.isFeatured} id={props.id} style:--moon={moon}>
-	<props.imageComponent />
+<div class:featured={isFeatured} {id} style:--moon={moon}>
+	<ImageComponent />
 </div>
 
 <style lang="scss">

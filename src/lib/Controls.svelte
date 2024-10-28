@@ -51,7 +51,7 @@
 
 			rotate: 3deg;
 			translate: 0 10px;
-
+			letter-spacing: 0;
 			&::after {
 				content: 'R.I.P.';
 				text-align: center;
@@ -62,13 +62,20 @@
 			}
 		}
 		button {
-			color: white;
+			--color: white;
+			color: var(--color);
 			background-color: transparent;
-			border: none;
 			padding: 1.5rem;
 			text-transform: uppercase;
 			cursor: pointer;
 			border: 1px solid currentColor;
+			font-family: 'Creepster', sans-serif;
+			letter-spacing: 0.25em;
+			font-size: 1rem;
+
+			&:hover {
+				--color: orange;
+			}
 
 			&[disabled] {
 				opacity: 0.2;
