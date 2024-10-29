@@ -6,15 +6,10 @@
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xml:space="preserve"
-	xmlns:serif="http://www.serif.com/"
 	style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
 >
 	<g transform="matrix(1,0,0,1,-8676,0)">
-		<g
-			id="Candy-corn"
-			serif:id="Candy corn"
-			transform="matrix(1.83038,0,0,0.950509,-7652.59,1524.51)"
-		>
+		<g id="Candy-corn" transform="matrix(1.83038,0,0,0.950509,-7652.59,1524.51)">
 			<rect x="8921.14" y="-1603.89" width="317.148" height="778.446" style="fill:none;" />
 			<g transform="matrix(2.43256,5.79201,-3.00777,4.68435,8971.56,-10196.4)">
 				<path

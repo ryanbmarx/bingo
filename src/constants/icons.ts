@@ -33,7 +33,7 @@ import Boo from '$lib/icons/Boo.svelte';
 import RainbowCat from '$lib/icons/RainbowCat.svelte';
 import PencilSpider from '$lib/icons/PencilSpider.svelte';
 
-export const halloween: IconImage[] = [
+const halloween: IconImage[] = [
 	{
 		id: 'MexicoSkull',
 		Component: MexicoSkull
@@ -155,3 +155,7 @@ export const halloween: IconImage[] = [
 	{ id: 'RainbowCat', Component: RainbowCat },
 	{ id: 'RainbowHalloween', Component: RainbowHalloween }
 ];
+
+export const icons: Record<string, IconImage[]> = {
+	halloween
+};

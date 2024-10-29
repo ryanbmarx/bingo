@@ -1,12 +1,12 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import Board from '$lib/Board.svelte';
-	import { page } from '$app/stores';
 	import { getRandomInt } from '$lib/../utils/random';
 
-	const { data } = $page;
+	let { data }: { data: PageData } = $props();
 
-	const { images } = data;
-
+	let { images = [] } = data;
+	console.log(data);
 	const PAGES = 50;
 
 	function getRandomImages(quantity = 25) {

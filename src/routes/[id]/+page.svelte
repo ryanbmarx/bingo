@@ -10,8 +10,7 @@
 
 	// UTILS
 	import { getRandomInt } from '$lib/../utils/random';
-	import type { IconImage } from '$lib/../types.d';
-	import { page } from '$app/stores';
+	import type { PageData } from './$types';
 
 	// COMPONENTS
 	import Controls from '$lib/Controls.svelte';
@@ -19,13 +18,14 @@
 	import House from '$lib/House.svelte';
 	import Witch from '$lib/Witch.svelte';
 
-	const images: IconImage[] = $page.data.images || [];
+	let { data } = $props();
+	let { images = [], pageTitle = 'Bingo' }: PageData = data;
 
 	let imagesToUse: typeof images = $state([...images]);
 	let usedImages: typeof images = $state([]);
-
-	let pageTitle = $page.data.pageTitle || 'Bingo';
 	let isDisabled = $derived(imagesToUse.length === 0);
+
+	$effect(() => {});
 
 	function handleNext() {
 		if (isDisabled) return;
@@ -69,7 +69,6 @@
 		xmlns="http://www.w3.org/2000/svg"
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		xml:space="preserve"
-		xmlns:serif="http://www.serif.com/"
 		style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
 	>
 		<g id="background-foreground" transform="matrix(1,0,0,1,0,-1200.47)">

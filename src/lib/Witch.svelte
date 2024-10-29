@@ -26,7 +26,6 @@
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xml:space="preserve"
-	xmlns:serif="http://www.serif.com/"
 >
 	<rect x="0" y="0" width="651.604" height="527.086" style="fill:none;" />
 	<clipPath id="_clip1-flying-witch">
