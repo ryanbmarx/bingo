@@ -1,4 +1,6 @@
 <script lang="ts">
+	// STYLES
+	import '$lib/../global.scss';
 	let { children } = $props();
 </script>
 

@@ -5,9 +5,6 @@
 
 	// https://www.vecteezy.com/vector-art/3057106-halloween-background-haunted-zombie-shadow-vector-illustration
 
-	// STYLES
-	import '$lib/../global.scss';
-
 	// UTILS
 	import { getRandomInt } from '$lib/../utils/random';
 	import type { PageData } from './$types';
