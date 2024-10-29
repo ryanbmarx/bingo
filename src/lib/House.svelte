@@ -80,7 +80,7 @@
 		bottom: 0;
 		left: 0;
 		width: unset;
-		height: 25rem;
+		height: clamp(25rem, 32vw, 45rem);
 		fill: #220929;
 	}
 
