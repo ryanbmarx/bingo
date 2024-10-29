@@ -11,7 +11,7 @@
 	let { isFeatured, ImageComponent, id }: Props = $props();
 </script>
 
-<div class="image" class:featured={isFeatured} {id} style:--moon={moon}>
+<div class="image" class:featured={isFeatured} {id}>
 	<ImageComponent />
 </div>
 
@@ -22,8 +22,12 @@
 		display: flex;
 		align-items: center;
 
-		&:not(.featured) :global(svg) {
-			// opacity: 0;
+		:global(svg .border) {
+			opacity: 0.65;
+		}
+
+		&.featured :global(svg .border) {
+			opacity: 0;
 		}
 	}
 

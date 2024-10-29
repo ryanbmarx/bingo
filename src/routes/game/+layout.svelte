@@ -132,7 +132,7 @@
 		padding: var(--gap);
 
 		display: grid;
-		grid-template: repeat(6, minmax(1px, 1fr)) / repeat(25, minmax(1px, 1fr));
+		grid-template: repeat(6, minmax(1px, 1fr)) / repeat(26, minmax(1px, 1fr));
 		gap: var(--gap);
 		align-items: center;
 
@@ -141,7 +141,7 @@
 		height: 100%;
 		width: 100%;
 
-		max-width: 1380px;
+		max-width: 1580px;
 		margin: 0 auto;
 
 		li {
