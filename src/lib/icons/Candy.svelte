@@ -9,9 +9,8 @@
 	xmlns:serif="http://www.serif.com/"
 	style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
 >
-	<title>Candy</title>
-	<g transform="matrix(1,0,0,1,-475,-1953)">
-		<g id="candy" transform="matrix(1,0,0,1,-0.330277,-0.405779)">
+	<g transform="matrix(1,0,0,1,-1138,-8782)">
+		<g id="candy" transform="matrix(1,0,0,1,662.67,6828.62)">
 			<rect x="475.33" y="1953.41" width="804.415" height="804.712" style="fill:none;" />
 			<g transform="matrix(1,0,0,1,-188.67,-493.787)">
 				<g>

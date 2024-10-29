@@ -11,16 +11,20 @@
 	let { isFeatured, ImageComponent, id }: Props = $props();
 </script>
 
-<div class:featured={isFeatured} {id} style:--moon={moon}>
+<div class="image" class:featured={isFeatured} {id} style:--moon={moon}>
 	<ImageComponent />
 </div>
 
 <style lang="scss">
-	div {
+	.image {
 		width: 100%;
 		position: relative;
 		display: flex;
 		align-items: center;
+
+		&:not(.featured) :global(svg) {
+			// opacity: 0;
+		}
 	}
 
 	.featured {
