@@ -1,6 +1,9 @@
 import { icons } from '../../constants/icons';
 import { titles } from '../../constants/titles';
 
+export const prerender = true;
+export const trailingSlash = 'always';
+
 export function load({ params }) {
 	const { id } = params;
 
