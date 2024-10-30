@@ -21,13 +21,31 @@
 		position: relative;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 
 		:global(svg .border) {
-			opacity: 0.65;
+			opacity: 0;
+		}
+		:global(svg) {
+			width: 80%;
+			position: relative;
+			z-index: 2;
 		}
 
-		&.featured :global(svg .border) {
-			opacity: 0;
+		// &.featured :global(svg .border) {
+		// 	opacity: 0;
+		// }
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			inset: 50%;
+			aspect-ratio: 1/1;
+			width: 100%;
+			background: radial-gradient(#fff4, #ffff);
+			translate: -50% -50%;
+			border-radius: 50%;
 		}
 	}
 
@@ -55,9 +73,12 @@
 			overflow: hidden;
 			mix-blend-mode: darken;
 			opacity: 0.2;
+			translate: none;
 		}
 
 		:global(svg) {
+			translate: none;
+			width: 100%;
 			position: relative;
 			opacity: 0;
 			animation: fadeIn 1s 1;
