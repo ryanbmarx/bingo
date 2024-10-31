@@ -58,7 +58,7 @@
 
 <Witch />
 <House />
-<Foreground></Foreground>
+<Foreground />
 
 <Controls {handleNext} {handleReset} {isDisabled} />
 

@@ -80,11 +80,11 @@
 		left: 0;
 		width: unset;
 		height: clamp(25rem, 32vw, 45rem);
-		fill: #220929;
+		fill: var(--sky-dark);
 	}
 
 	.window {
-		fill: #fcca4c;
+		fill: var(--orange);
 		opacity: 0.1;
 		filter: grayscale(100%);
 		transition:
