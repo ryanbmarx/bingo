@@ -23,6 +23,8 @@
 		align-items: center;
 		justify-content: center;
 
+		max-width: 30rem;
+
 		:global(svg .border) {
 			opacity: 0;
 		}

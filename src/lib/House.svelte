@@ -54,7 +54,6 @@
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xml:space="preserve"
-	style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
 >
 	<rect id="house" x="0" y="0" width="1146.95" height="1531.31" style="fill:none;" />
 	<clipPath id="house-clip">
@@ -95,6 +94,12 @@
 		&.on {
 			opacity: 1;
 			filter: grayscale(0);
+		}
+	}
+
+	@media all and (min-width: 1050px) {
+		svg {
+			max-height: 22rem;
 		}
 	}
 </style>
